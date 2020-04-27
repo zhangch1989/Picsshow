@@ -1,11 +1,16 @@
 package com.zch.picsshow.tools;
 
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.os.Environment;
 import android.text.TextUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 
 /**
@@ -81,6 +86,38 @@ public class FileUtils {
             }
         }
         return fileName;
+    }
+
+    public static Bitmap getImageFromAssetsFile(Context context, String fileName)
+    {
+        Bitmap image = null;
+        AssetManager am = context.getResources().getAssets();
+        try{
+            InputStream is = am.open(fileName);
+            image = BitmapFactory.decodeStream(is);
+            is.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        return image;
+    }
+
+    public static Bitmap scaleBitmap(Bitmap btmap, int newWidth, int newHeight){
+        if (btmap == null){
+            return btmap;
+        }
+        int width = btmap.getWidth();
+        int height = btmap.getHeight();
+        // 设置想要的大小
+        // 计算缩放比例
+        float scaleWidth = ((float) newWidth) / width;
+        float scaleHeight = ((float) newHeight) / height;
+        // 取得想要缩放的matrix参数
+        Matrix matrix = new Matrix();
+        matrix.postScale(scaleWidth, scaleHeight);
+        // 修改得到的bitmap的大小,根据个人需求自行设置
+        Bitmap bitMap = Bitmap.createBitmap(btmap, 0, 0, width, height, matrix, true);
+        return bitMap;
     }
 
 }

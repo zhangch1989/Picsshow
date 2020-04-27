@@ -11,29 +11,43 @@
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".Activity_Login">
-
-        </activity>
-        <activity android:name=".MainActivity">
-        </activity>
-        <activity android:name=".mypage.MainActivity">
-        </activity>
-        <activity android:name=".Activity_Pdfshow">
-        </activity>
-        <activity android:name=".Activity_Videoshow">
+        <activity android:name=".Activity_Login"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".Activity_Pdfshow">
+        </activity>
+        <activity android:name=".Activity_Videoshow"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".Activity_Project"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Activity_Studio"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Activity_Introduce"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Activity_Organization"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Activity_Goods"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Activity_Detail"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

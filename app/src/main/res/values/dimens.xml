@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="top_textsize">32sp</dimen>
+    <dimen name="rl_top_height">64dp</dimen>
+    <dimen name="top_title_margintop">40dp</dimen>
+    <dimen name="top_btn_paddingleft">20dp</dimen>
+
+    <dimen name="rl_bottom_height">125dp</dimen>
+    <dimen name="main_btn_size">20dp</dimen>
+    <dimen name="bottom_btn_margintop">20dp</dimen>
+
+    <dimen name="introduce_title_textsize">24dp</dimen>
+    <dimen name="introduce_textsize">20dp</dimen>
+    <dimen name="introduce_margintop">20dp</dimen>
+
+    <dimen name="content_margin">10dp</dimen>
+    <dimen name="pic_content_magrin">40dp</dimen>
+
+    <dimen name="good_btn_margin">10dp</dimen>
+    <dimen name="good_btn_padding">10dp</dimen>
+
+</resources>

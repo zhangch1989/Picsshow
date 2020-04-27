@@ -31,7 +31,7 @@ import java.util.List;
  * create on ：2015年10月9日
  */
 public class CommonUtils {
-	private static String[] PERMISSIONS_STORAGE = {
+	public static String[] PERMISSIONS_STORAGE = {
 			Manifest.permission.READ_EXTERNAL_STORAGE,
 			Manifest.permission.WRITE_EXTERNAL_STORAGE }; //Android6.0以后操作系统的动态权限申请
 

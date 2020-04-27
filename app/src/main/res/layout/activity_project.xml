@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/main_bg"
+    tools:context="com.zch.picsshow.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/top_bg"
+        >
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@mipmap/btn_back"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/top_title_margintop"
+            android:paddingLeft="@dimen/top_btn_paddingleft"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/top_btn_paddingleft"
+            android:layout_marginTop="@dimen/top_title_margintop"
+            android:layout_marginBottom="10dp"
+            android:src="@mipmap/icon_logo"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/top_title_margintop"
+            android:text="餐厨垃圾处置项目"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_textsize"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rl_bottom_height"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/btn_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/bottom_btn_margintop"
+            style="@style/bottom_btn"
+            android:text="首页"
+            android:background="@mipmap/main_btn_bg"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_top"
+        android:layout_above="@id/rl_bottom"
+        android:layout_marginRight="@dimen/pic_content_magrin"
+        android:layout_marginLeft="@dimen/pic_content_magrin"
+        android:background="@mipmap/project_content_bg"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false">
+
+            <com.zch.picsshow.view.NoParentScrollViewPager
+                android:id="@+id/id_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:clipChildren="false" />
+        </FrameLayout>
+        <LinearLayout
+            android:id="@+id/ll_dots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
