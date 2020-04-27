@@ -79,6 +79,8 @@ public class Activity_Introduce extends BaseActivity {
         setTextViewColor(tv7);
         setTextViewColor(tv8);
         setTextViewColor(tv9);
+        tv10.setLineSpacing(1, 1.2f);
+        tv11.setLineSpacing(1, 1.2f);
     }
 
     private void initEvent(){
