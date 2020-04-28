@@ -29,7 +29,7 @@ public class Activity_Project extends BaseActivity {
     private Context context;
 
     private ImageButton ibtn_back;
-    private Button btn_first;
+    private Button btn_first, btn_sudio;
     private NoParentScrollViewPager viewPager;
     private LinearLayout ll_dots;
 
@@ -62,6 +62,7 @@ public class Activity_Project extends BaseActivity {
     private void initView(){
         ibtn_back = (ImageButton) findViewById(R.id.btn_back);
         btn_first = (Button) findViewById(R.id.btn_first);
+        btn_sudio = (Button) findViewById(R.id.btn_studio);
         viewPager = (NoParentScrollViewPager) findViewById(R.id.id_viewpager);
         ll_dots = (LinearLayout) findViewById(R.id.ll_dots);
 
@@ -110,6 +111,16 @@ public class Activity_Project extends BaseActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        btn_sudio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, Activity_Studio.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();

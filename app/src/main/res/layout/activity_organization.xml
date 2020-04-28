@@ -55,7 +55,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/bottom_btn_margintop"
             style="@style/bottom_btn"
-            android:text="劳模创新工作室"
+            android:text="返回工作室"
             android:background="@mipmap/main_btn_bg"
             />
     </RelativeLayout>
